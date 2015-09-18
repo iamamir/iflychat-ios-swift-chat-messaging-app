@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  iFlyChatExampleSwiftChatView
 //
-//  Created by Prateek Grover on 09/09/15.
-//  Copyright (c) 2015 Prateek Grover. All rights reserved.
+//  Created by iFlyLabs on 09/09/15.
+//  Copyright (c) 2015 iFlyLabs. All rights reserved.
 //
 
 import UIKit

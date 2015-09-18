@@ -2,8 +2,8 @@
 //  Header.h
 //  iFlyChatExampleSwiftChatView
 //
-//  Created by Prateek Grover on 05/08/15.
-//  Copyright (c) 2015 Prateek Grover. All rights reserved.
+//  Created by iFlyLabs on 05/08/15.
+//  Copyright (c) 2015 iFlyLabs. All rights reserved.
 //
 
 #ifndef iFlyChatExampleSwiftChatView_Header_h

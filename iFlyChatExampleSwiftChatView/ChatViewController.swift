@@ -404,13 +404,24 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func updateTableView(msg:iFlyChatMessage)
     {
         //Check which are the visible paths and how many messages are there. If the user is on last message then if a message is received, scroll the table view. If the user is not on the last message and a message is received then do not scroll the table view.
-        var paths: NSArray = self.chatTable.indexPathsForVisibleRows()!
+        let paths: NSArray = self.chatTable.indexPathsForVisibleRows!
+        let lastVisibleRow: Int
+        let messageLastRow: Int
         
-        var lastVisibleRowIndexPath:NSIndexPath = paths.objectAtIndex((paths.count - 1)) as! NSIndexPath
-        
-        var lastVisibleRow = lastVisibleRowIndexPath.row
-        
-        var messageLastRow = currentMessages.count - 1
+        if(paths.count == 0)
+        {
+            lastVisibleRow = 0;
+            messageLastRow = 0;
+        }
+        else
+        {
+            let lastVisibleRowIndexPath:NSIndexPath = paths.objectAtIndex((paths.count - 1)) as! NSIndexPath
+            
+            lastVisibleRow = lastVisibleRowIndexPath.row
+            
+            messageLastRow = currentMessages.count - 1
+        }
+
         
         //Update the table view
         self.chatTable.beginUpdates()

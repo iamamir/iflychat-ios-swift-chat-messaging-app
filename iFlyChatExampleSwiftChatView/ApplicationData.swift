@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc class ApplicationData {
+class ApplicationData {
     
     var config:iFlyChatConfig!
     var session:iFlyChatUserSession!

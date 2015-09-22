@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     
     func chatConnect(notification:NSNotification)
     {
-        var dict:NSDictionary = notification.object! as! NSDictionary
+        let dict:NSDictionary = notification.object! as! NSDictionary
         appData.loggedUser = dict.objectForKey("iFlyChatCurrentUser") as! iFlyChatUser
     }
     

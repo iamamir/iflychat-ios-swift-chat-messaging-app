@@ -14,12 +14,12 @@
 		6E6743081BA9811000B03D5E /* ChatCellSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6743061BA9811000B03D5E /* ChatCellSettings.m */; };
 		6E6A5FA61BA01BAF00DB6E55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6A5FA51BA01BAF00DB6E55 /* ViewController.swift */; };
 		6E8F10061B7B547A00794CF6 /* DataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8F10051B7B547A00794CF6 /* DataClass.swift */; };
+		6EA92D8B1BB133E2001A6B56 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA92D8A1BB133E2001A6B56 /* libicucore.tbd */; };
 		6EBA0C311B71DCB100F0C476 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBA0C301B71DCB100F0C476 /* AppDelegate.swift */; };
 		6EBA0C361B71DCB100F0C476 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EBA0C341B71DCB100F0C476 /* Main.storyboard */; };
 		6EBA0C381B71DCB100F0C476 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EBA0C371B71DCB100F0C476 /* Images.xcassets */; };
 		6EBA0C3B1B71DCB100F0C476 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EBA0C391B71DCB100F0C476 /* LaunchScreen.xib */; };
 		6EBA0C471B71DCB100F0C476 /* iFlyChatExampleSwiftChatViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBA0C461B71DCB100F0C476 /* iFlyChatExampleSwiftChatViewTests.swift */; };
-		6EBA0C561B71DD5200F0C476 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBA0C551B71DD5200F0C476 /* libicucore.dylib */; };
 		6EBA0C5A1B71E2FB00F0C476 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBA0C591B71E2FB00F0C476 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +44,8 @@
 		6E6743061BA9811000B03D5E /* ChatCellSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatCellSettings.m; sourceTree = "<group>"; };
 		6E6A5FA51BA01BAF00DB6E55 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6E8F10051B7B547A00794CF6 /* DataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataClass.swift; sourceTree = "<group>"; };
+		6EA92D8A1BB133E2001A6B56 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		6EA92D9B1BB155B6001A6B56 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		6EBA0C2B1B71DCB100F0C476 /* iFlyChatExampleSwiftChatView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFlyChatExampleSwiftChatView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBA0C2F1B71DCB100F0C476 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EBA0C301B71DCB100F0C476 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,8 +55,6 @@
 		6EBA0C401B71DCB100F0C476 /* iFlyChatExampleSwiftChatViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iFlyChatExampleSwiftChatViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBA0C451B71DCB100F0C476 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EBA0C461B71DCB100F0C476 /* iFlyChatExampleSwiftChatViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFlyChatExampleSwiftChatViewTests.swift; sourceTree = "<group>"; };
-		6EBA0C501B71DD2F00F0C476 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
-		6EBA0C551B71DD5200F0C476 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		6EBA0C591B71E2FB00F0C476 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EBA0C561B71DD5200F0C476 /* libicucore.dylib in Frameworks */,
+				6EA92D8B1BB133E2001A6B56 /* libicucore.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,8 +89,8 @@
 		6EBA0C221B71DCB100F0C476 = {
 			isa = PBXGroup;
 			children = (
-				6EBA0C551B71DD5200F0C476 /* libicucore.dylib */,
-				6EBA0C501B71DD2F00F0C476 /* Header.h */,
+				6EA92D9B1BB155B6001A6B56 /* Header.h */,
+				6EA92D8A1BB133E2001A6B56 /* libicucore.tbd */,
 				6E2FD8641B78948B00FF51B2 /* Custom UIView for TextView */,
 				6EBA0C2D1B71DCB100F0C476 /* iFlyChatExampleSwiftChatView */,
 				6EBA0C431B71DCB100F0C476 /* iFlyChatExampleSwiftChatViewTests */,
@@ -213,7 +213,9 @@
 		6EBA0C231B71DCB100F0C476 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Prateek Grover";
 				TargetAttributes = {
 					6EBA0C2A1B71DCB100F0C476 = {
@@ -341,6 +343,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -356,7 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -395,7 +398,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -410,10 +413,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = iFlyChatExampleSwiftChatView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "iFlyLabs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Header.h;
 			};
@@ -426,10 +431,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = iFlyChatExampleSwiftChatView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "iFlyLabs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Header.h;
 			};
@@ -439,17 +446,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = iFlyChatExampleSwiftChatViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "iFlyLabs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iFlyChatExampleSwiftChatView.app/iFlyChatExampleSwiftChatView";
 			};
 			name = Debug;
@@ -458,13 +464,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = iFlyChatExampleSwiftChatViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "iFlyLabs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iFlyChatExampleSwiftChatView.app/iFlyChatExampleSwiftChatView";
 			};
 			name = Release;

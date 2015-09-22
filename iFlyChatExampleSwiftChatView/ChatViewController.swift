@@ -168,7 +168,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.handler.updateMinimumNumberOfLines(1, andMaximumNumberOfLine: 3)
         
         //Tap gesture on table view so that when someone taps on it, the keyboard is hidden
-        var gestureRecognizer:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let gestureRecognizer:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         
         self.chatTable.addGestureRecognizer(gestureRecognizer)
         
@@ -311,7 +311,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func chatConnect(notification:NSNotification)
     {
         //When the chat is connected, save the logged in user's information in a variable
-        var dict:NSDictionary = notification.object! as! NSDictionary
+        let dict:NSDictionary = notification.object! as! NSDictionary
         appData.loggedUser = dict.objectForKey("iFlyChatCurrentUser") as! iFlyChatUser
         
         self.chatStatusView.backgroundColor = UIColor.greenColor()
@@ -352,9 +352,9 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
                     if !chatUser.getAvatarUrl().isEmpty
                     {
                         //Download and set the image
-                        var url: NSURL = NSURL(string: String(format: "%@%@","http:", chatUser.getAvatarUrl()))!
-                        var data = NSData(contentsOfURL: url)!
-                        var img = UIImage(data: data)
+                        let url: NSURL = NSURL(string: String(format: "%@%@","http:", chatUser.getAvatarUrl()))!
+                        let data = NSData(contentsOfURL: url)!
+                        let img = UIImage(data: data)
                         self.userImage.image = img
                     }
                 }
@@ -368,7 +368,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //If we are chatting in a room then go ahead
         if(!ROOMID.isEqualToString(""))
         {
-            var msg:iFlyChatMessage = notification.object! as! iFlyChatMessage
+            let msg:iFlyChatMessage = notification.object! as! iFlyChatMessage
             
             //If the message that is received here is sent to the room I am currently chatting in then go ahead
             if(ROOMID.isEqualToString(msg.getToId()))
@@ -388,7 +388,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //Same as rooms comments
         if(!USERID.isEqualToString(""))
         {
-            var msg:iFlyChatMessage = notification.object! as! iFlyChatMessage
+            let msg:iFlyChatMessage = notification.object! as! iFlyChatMessage
             
             if(USERID.isEqualToString(msg.getToId()) || USERID.isEqualToString(msg.getFromId()))
             {
@@ -403,18 +403,28 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func updateTableView(msg:iFlyChatMessage)
     {
         //Check which are the visible paths and how many messages are there. If the user is on last message then if a message is received, scroll the table view. If the user is not on the last message and a message is received then do not scroll the table view.
-        var paths: NSArray = self.chatTable.indexPathsForVisibleRows()!
+        let paths: NSArray = self.chatTable.indexPathsForVisibleRows!
+        let lastVisibleRow: Int
+        let messageLastRow: Int
         
-        var lastVisibleRowIndexPath:NSIndexPath = paths.objectAtIndex((paths.count - 1)) as! NSIndexPath
+        if(paths.count == 0)
+        {
+            lastVisibleRow = 0;
+            messageLastRow = 0;
+        }
+        else
+        {
+            let lastVisibleRowIndexPath:NSIndexPath = paths.objectAtIndex((paths.count - 1)) as! NSIndexPath
         
-        var lastVisibleRow = lastVisibleRowIndexPath.row
+            lastVisibleRow = lastVisibleRowIndexPath.row
         
-        var messageLastRow = currentMessages.count - 1
+            messageLastRow = currentMessages.count - 1
+        }
         
         //Update the table view
         self.chatTable.beginUpdates()
         
-        var row1:NSIndexPath = NSIndexPath(forRow: currentMessages.count, inSection: 0)
+        let row1:NSIndexPath = NSIndexPath(forRow: currentMessages.count, inSection: 0)
         
         //Insert the newly received message in the dictionary
         currentMessages.insertObject(msg, forKey: msg.getMessageId() as NSString, atIndex: currentMessages.count())
@@ -425,7 +435,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         if lastVisibleRow == messageLastRow
         {
-            var ip:NSIndexPath = NSIndexPath(forRow: self.chatTable.numberOfRowsInSection(0)-1, inSection: 0)
+            let ip:NSIndexPath = NSIndexPath(forRow: self.chatTable.numberOfRowsInSection(0)-1, inSection: 0)
             
             self.chatTable.scrollToRowAtIndexPath(ip, atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
         }
@@ -456,7 +466,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         self.chatTable.beginUpdates()
         
-        var row1:NSIndexPath = NSIndexPath(forRow: currentMessages.count, inSection: 0)
+        let row1:NSIndexPath = NSIndexPath(forRow: currentMessages.count, inSection: 0)
         
         currentMessages.insertObject(sendMessage, forKey: sendMessage.getMessageId() as NSString, atIndex: currentMessages.count())
         
@@ -467,7 +477,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //Always scroll the chat table when the user sends the message
         if self.chatTable.numberOfRowsInSection(0) != 0
         {
-            var ip:NSIndexPath = NSIndexPath(forRow: self.chatTable.numberOfRowsInSection(0)-1, inSection: 0)
+            let ip:NSIndexPath = NSIndexPath(forRow: self.chatTable.numberOfRowsInSection(0)-1, inSection: 0)
             
             self.chatTable.scrollToRowAtIndexPath(ip, atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
         }
@@ -487,7 +497,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        var message:iFlyChatMessage = currentMessages.objectAtIndex(UInt(indexPath.row)) as! iFlyChatMessage
+        let message:iFlyChatMessage = currentMessages.objectAtIndex(UInt(indexPath.row)) as! iFlyChatMessage
         
         if(appData.loggedUser.getId() == message.getFromId())
         {
@@ -604,7 +614,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
     {
         
-        var message:iFlyChatMessage = currentMessages.objectAtIndex(UInt(indexPath.row)) as! iFlyChatMessage
+        let message:iFlyChatMessage = currentMessages.objectAtIndex(UInt(indexPath.row)) as! iFlyChatMessage
         
         var size:CGSize = CGSizeZero
         var Namesize:CGSize
@@ -643,11 +653,11 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func loadImagesWithURL(imageURL:NSString,indexPath:NSIndexPath, activeTableView:UITableView, userId:NSString)
     {
-        var url:NSURL = NSURL(string: imageURL as String)!
+        let url:NSURL = NSURL(string: imageURL as String)!
         
-        var data:NSData = NSData(contentsOfURL: url)!
+        let data:NSData = NSData(contentsOfURL: url)!
         
-        var img:UIImage = UIImage(data: data)!
+        let img:UIImage = UIImage(data: data)!
         
         //Caching the downloaded image
         userImageCache.setObject(img, forKey: userId)

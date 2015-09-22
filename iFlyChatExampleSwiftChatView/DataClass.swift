@@ -59,7 +59,7 @@ class DataClass {
     
     @objc func updateGlobalList(notification: NSNotification)
     {
-        var updatedRoster: iFlyChatRoster = notification.object as! iFlyChatRoster
+        let updatedRoster: iFlyChatRoster = notification.object as! iFlyChatRoster
         
         appData.userList = updatedRoster.getUserList()
         updatedUserList = true
